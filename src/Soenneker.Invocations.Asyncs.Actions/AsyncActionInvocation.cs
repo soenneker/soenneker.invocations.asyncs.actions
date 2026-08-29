@@ -24,10 +24,10 @@ public sealed class AsyncActionInvocation
     }
 
     /// <summary>
-    /// Executes the invoke operation.
+    /// Invokes the async action invocation with the supplied payload.
     /// </summary>
-    /// <param name="ct">The ct.</param>
-    /// <returns>A task that represents the asynchronous operation.</returns>
+    /// <param name="ct">Ct for the invoke operation.</param>
+    /// <returns>A task that completes when the callback has finished running.</returns>
     [MethodImpl(MethodImplOptions.AggressiveInlining)]
     public Task Invoke(CancellationToken ct = default) => _callback(State, ct);
 }
