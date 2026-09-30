@@ -13,7 +13,7 @@ public sealed class AsyncActionInvocationTests : UnitTest
     }
 
     [Test]
-    public async Task Invoke_passes_state_and_cancellation_token()
+    public async ValueTask Invoke_passes_state_and_cancellation_token()
     {
         var observed = new ObservedInvocation();
         using var cancellation = new CancellationTokenSource();
